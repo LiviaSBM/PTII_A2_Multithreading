@@ -7,15 +7,16 @@ import java.util.Random;
 
 public class A2 {
     static int cheese= 10; //initial cheese quantity
-    static int x = 1; //initial mice qty
-    static int y = 3; //Initial qty of traps
+    static int x = 3; //initial mice qty
+    static int y = 2; //Initial qty of traps
     //static int index = 0; //initial index
     static int lostCheese = 0; //initial qty of lost cheese
-    static List miceList = new ArrayList(); //AINDA NECESSARIO????????????????????????????????????????????????????
+    //static List miceList = new ArrayList(); //AINDA NECESSARIO????????????????????????????????????????????????????
     //?????????????????????????????????
     static List deadMiceList = new ArrayList(); //List of dead mouses
     static List emptyList = new ArrayList();
     static Random liveordie = new Random();
+    static int mousenumber = 1;
 
 
     public static boolean mouseFate(int mouse){
@@ -50,13 +51,14 @@ public class A2 {
     public static void main(String[] args) {
         
         MiceThread my_Thread = new MiceThread();
-        Thread mouseThread = new Thread(my_Thread);
-        mouseThread.start();
+        // Thread mouseThread = new Thread(my_Thread);
+        // mouseThread.start();
 
-        // for (int a=0; a<x; a++){
-        //      Thread mouseThread = new Thread(my_Thread);
-        //      mouseThread.start();
-        //  }
+         for (int a=0; a<x; a++){
+              Thread mouseThread = new Thread(my_Thread);
+              mouseThread.start();
+              mousenumber++;
+          }
 
         CheeseThread my_cheeseThread = new CheeseThread();
         Thread cheesethread = new Thread(my_cheeseThread);

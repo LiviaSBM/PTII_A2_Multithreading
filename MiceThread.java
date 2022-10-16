@@ -3,7 +3,7 @@ public class MiceThread extends A2 implements Runnable{
     @Override
     public void run(){
         boolean aliveMouse = true;
-        int mouse = 1;
+        int mouse = mousenumber;
 
         while (x>0 && aliveMouse){ //while there's still mouses alive
             try {
