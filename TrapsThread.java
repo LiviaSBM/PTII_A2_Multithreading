@@ -8,13 +8,16 @@ public class TrapsThread extends A2 implements Runnable{
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
             }
-            System.out.println("========================================================"); //printing pattern
-            for (int j=0; j<deadMousesList.size();j++){ //Loop for printing the removal of the mice from traps
-                System.out.println("[Action] Store owner remove mouse-"+deadMousesList.get(j));
-                traps ++; //Increment of available traps
+            if(deadMiceList.size()>0){
+                System.out.println("========================================================"); //printing pattern
+            for (int j=0; j<deadMiceList.size();j++){ //Loop for printing the removal of the mice from traps
+                System.out.println("[Action] Store owner remove mouse-"+deadMiceList.get(j));
+                y ++; //Increment of available traps
             }
-            deadMousesList = emptyList; //zeroing out dead mouses list
+            deadMiceList = emptyList; //zeroing out dead mouses list
             System.out.println ("========================================================\n"); //printing pattern
+            }
+            
         }
 
     }

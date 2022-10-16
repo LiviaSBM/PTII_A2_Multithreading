@@ -4,7 +4,7 @@ public class CheeseThread extends A2 implements Runnable{
     @Override
     public void run(){
 
-        while (x>0){ //while there're still live mice...
+        while (x>0){ //while there're still mice alive...
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
