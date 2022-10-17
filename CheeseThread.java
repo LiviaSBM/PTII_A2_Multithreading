@@ -1,3 +1,6 @@
+//Student Name: Livia Menezes
+//Student ID: 261066016
+
 public class CheeseThread extends A2 implements Runnable{
 
 //Thread of Cheese machine
@@ -11,9 +14,6 @@ public class CheeseThread extends A2 implements Runnable{
                 System.out.println("[Action] Cheese Machine add 10 grams of cheese\n");
                 System.out.println("[Status] cheese left: "+cheese+"\n"); //printing pattern
             }
-
-            System.out.println("surviving mice "+x);
-
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
